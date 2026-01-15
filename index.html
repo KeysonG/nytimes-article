@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Smartphone Tech Fast Sweeping College Campuses - The New York Times</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: #ffffff;
+      color: #121212;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* Page Layout */
+    .page-wrapper {
+      background: #ffffff;
+      min-height: 100vh;
+      color: #121212;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 1px solid #e2e2e2;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 8px 20px;
+      height: 44px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .header-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+
+    .header-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .subscribe-btn {
+      background: #121212;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Ribbon */
+    .ribbon-wrapper {
+      background: #f7f7f7;
+      border-bottom: 1px solid #e2e2e2;
+      padding: 8px 0;
+    }
+
+    .ribbon {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    /* Main Layout */
+    .main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+    }
+
+    .article {
+      flex: 1;
+      max-width: 720px;
+      padding: 24px 0 60px;
+    }
+
+    .sidebar {
+      width: 280px;
+      flex-shrink: 0;
+      padding: 24px 0;
+      border-left: 1px solid #e2e2e2;
+      padding-left: 24px;
+    }
+
+    /* Article Header */
+    .section-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+
+    .section-link {
+      color: #121212;
+    }
+
+    .headline {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .summary {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .byline {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .byline-author {
+      color: #326891;
+      text-decoration: underline;
+    }
+
+    .timestamp-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .timestamp {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .share-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #e2e2e2;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-size: 12px;
+    }
+
+    /* Podcast Player */
+    .podcast-container {
+      background: #f7f7f7;
+      border: 1px solid #e2e2e2;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      margin-top: 8px;
+    }
+
+    .podcast-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .podcast-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .podcast-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #121212;
+    }
+
+    .podcast-duration {
+      font-size: 12px;
+      color: #666;
+      margin-left: auto;
+    }
+
+    .podcast-player {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .play-button {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #121212;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.1s;
+    }
+
+    .play-button:hover {
+      transform: scale(1.05);
+    }
+
+    .waveform-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .waveform {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      gap: 2px;
+    }
+
+    .waveform-bar {
+      flex: 1;
+      min-width: 4px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+
+    .time-display {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .current-time {
+      color: #121212;
+      font-weight: 500;
+    }
+
+    .total-time {
+      color: #999;
+    }
+
+    .speed-btn {
+      width: 36px;
+      height: 28px;
+      border-radius: 4px;
+      background: transparent;
+      border: 1px solid #c0c0c0;
+      font-size: 12px;
+      font-weight: 500;
+      color: #121212;
+      cursor: pointer;
+    }
+
+    .podcast-info {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      padding-top: 8px;
+      border-top: 1px solid #e2e2e2;
+    }
+
+    .customize-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 16px;
+      margin-top: 14px;
+      background: transparent;
+      border: 1px solid #c0c0c0;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #121212;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .customize-btn:hover {
+      background: #f0f0f0;
+    }
+
+    /* Lead Image */
+    .lead-image {
+      margin-bottom: 24px;
+    }
+
+    .lead-img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .credit {
+      display: block;
+      font-size: 12px;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    /* Article Body */
+    .article-body {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #121212;
+    }
+
+    .article-body p {
+      margin-bottom: 20px;
+    }
+
+    .drop-cap {
+      float: left;
+      font-size: 72px;
+      line-height: 0.75;
+      padding-right: 8px;
+      padding-top: 8px;
+      font-family: Georgia, serif;
+      font-weight: 700;
+    }
+
+    .pull-quote {
+      margin: 32px 0;
+      padding: 24px 0;
+      border-top: 3px solid #121212;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .pull-quote-text {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-style: italic;
+      line-height: 1.4;
+      color: #121212;
+      margin: 0;
+    }
+
+    .subhead {
+      font-family: Georgia, serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 32px 0 20px;
+    }
+
+    .inline-image {
+      margin: 32px 0;
+    }
+
+    .inline-img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Related Box */
+    .related-box {
+      background: #f7f7f7;
+      padding: 16px 20px;
+      margin: 32px 0;
+      border-left: 3px solid #121212;
+    }
+
+    .related-header {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      font-family: -apple-system, sans-serif;
+    }
+
+    .related-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .related-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .related-item:last-child {
+      border-bottom: none;
+    }
+
+    .related-link {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: #326891;
+    }
+
+    /* Article Footer */
+    .article-footer {
+      padding-top: 24px;
+      border-top: 1px solid #e2e2e2;
+      margin-top: 32px;
+    }
+
+    .author-bio {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .author-bio-link {
+      color: #326891;
+      font-weight: 700;
+    }
+
+    .tag-section {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid #e2e2e2;
+      background: #fff;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* Sidebar */
+    .sidebar-section {
+      margin-bottom: 32px;
+    }
+
+    .sidebar-heading {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border-bottom: 2px solid #121212;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .popular-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: popular;
+    }
+
+    .popular-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e2e2;
+      counter-increment: popular;
+      position: relative;
+      padding-left: 24px;
+    }
+
+    .popular-item::before {
+      content: counter(popular);
+      position: absolute;
+      left: 0;
+      color: #999;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .popular-link {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      line-height: 1.4;
+      color: #121212;
+    }
+
+    .popular-link:hover {
+      text-decoration: underline;
+    }
+
+    .editors-pick {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .editors-pick:last-child {
+      border-bottom: none;
+    }
+
+    .editors-pick-img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .editors-pick-text {
+      font-family: Georgia, serif;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #121212;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 2px solid #121212;
+      margin-top: 40px;
+      padding: 24px 0;
+      font-size: 12px;
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-home-link {
+      font-size: 12px;
+      color: #121212;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .footer-columns {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 120px;
+    }
+
+    .footer-column-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .footer-column-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column-links a {
+      font-size: 12px;
+      color: #333;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e2e2e2;
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 11px;
+      color: #666;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #666;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 2000;
+      display: none;
+    }
+
+    .modal-backdrop.show {
+      display: block;
+    }
+
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.95);
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px;
+      z-index: 2001;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      display: none;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+
+    .modal.show {
+      display: block;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #666;
+      padding: 4px;
+    }
+
+    .modal-title {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: "Playfair Display", Georgia, serif;
+      text-align: center;
+      margin-bottom: 28px;
+      color: #121212;
+    }
+
+    .modal-section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #121212;
+    }
+
+    .topics-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .topic-chip {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid #d0d0d0;
+      background: #fff;
+      font-size: 14px;
+      color: #121212;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .topic-chip.selected {
+      background: #121212;
+      color: #fff;
+      border-color: #121212;
+    }
+
+    .voice-options {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .voice-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: #fff;
+      border: none;
+      border-bottom: 1px solid #f0f0f0;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .voice-option:last-child {
+      border-bottom: none;
+    }
+
+    .voice-option.selected {
+      background: #fafafa;
+    }
+
+    .voice-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #121212;
+    }
+
+    .voice-name {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .radio-outer {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #d0d0d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .radio-outer.selected {
+      border-color: #121212;
+    }
+
+    .radio-inner {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #121212;
+    }
+
+    .slider-container {
+      padding: 8px 0;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 2px solid #121212;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .slider-labels .current {
+      font-weight: 600;
+      color: #121212;
+    }
+
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .generate-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: #121212;
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .generate-btn:hover {
+      background: #333;
+    }
+
+    .cancel-btn {
+      padding: 14px 24px;
+      background: #fff;
+      color: #121212;
+      border: 1px solid #e0e0e0;
+      border-radius: 24px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cancel-btn:hover {
+      background: #f7f7f7;
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        display: none;
+      }
+      .article {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="header-btn" aria-label="Menu">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect y="2" width="16" height="1.5" fill="currentColor"/>
+              <rect y="7.25" width="16" height="1.5" fill="currentColor"/>
+              <rect y="12.5" width="16" height="1.5" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="header-btn" aria-label="Search">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="10.5" y1="10.5" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header-center">
+          <a href="/">
+            <svg viewBox="0 0 184 25" style="width: 184px; height: 25px;">
+              <path fill="currentColor" d="M13.8 2.9c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8C6.2 1.4 5 1 4 1 2 1 .6 2.5.6 4.2c0 1.5 1.1 2 1.5 2.2l.1-.2c-.2-.2-.5-.4-.5-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1L9 10.2v.1l1.5 1.3v4.3c-.8.5-1.7.6-2.5.6-1.5 0-2.8-.4-3.9-1.6l4.1-2V6l-5 2.2C3.6 6.9 4.7 6 5.8 5.4l-.1-.3c-3 .8-5.7 3.6-5.7 7 0 4.1 3.1 7.4 7.5 7.4 4.1 0 6.6-3.1 6.6-6.1h-.2c-.8 1.5-2.2 2.6-3.9 2.9v-4.4l1.5-1.3v-.1L10 9.3V6c.8 0 1.9-.2 2.7-.6.3.5.5 1.2.5 2v.2l.1-.1c1.1-1 1.9-1.6 2.9-1.6.8 0 1.5.5 1.5 1.3 0 .9-.7 1.4-1.4 1.9-.5.3-1.1.7-1.1 1.4 0 .9.8 1.8 2 1.8 1.3 0 2.4-1.1 2.4-2.6 0-1.4-1.1-3.4-3.8-3.4-.9 0-1.7.2-2.5.6V4.7c0-1.3.5-1.8 1.3-1.8.7 0 1.2.3 1.2.9 0 .3-.1.5-.1.6h.3c.4-.5.8-1.2.8-1.9zM7.5 12.9l-1.6.8c-.6-.8-1-2-1-3.4 0-.7.1-1.3.2-1.9l2.4-1v5.5z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="header-right">
+          <button class="subscribe-btn">Subscribe</button>
+          <button class="login-btn">Log in</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Ribbon -->
+    <div class="ribbon-wrapper">
+      <div class="ribbon">
+        <span>🔓</span>
+        <span>This article is unlocked. Share this gift.</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+      <article class="article">
+        <!-- Section Label -->
+        <div class="section-label">
+          <a href="#" class="section-link">Style</a>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="headline">The Smartphone Tech Fast Sweeping College Campuses</h1>
+
+        <!-- Summary -->
+        <p class="summary">
+          Across the country, students are trading their iPhones for flip phones, 
+          finding unexpected clarity in disconnection. A growing movement embraces 
+          the discomfort of being unreachable.
+        </p>
+
+        <!-- Byline -->
+        <div class="byline">
+          <span>By </span>
+          <a href="#" class="byline-author">Emma Goldberg</a>
+        </div>
+
+        <!-- Timestamp & Share -->
+        <div class="timestamp-row">
+          <time class="timestamp">Jan. 3, 2026</time>
+          <div class="share-buttons">
+            <button class="share-btn">🎁</button>
+            <button class="share-btn">🔖</button>
+            <button class="share-btn">↗</button>
+            <button class="share-btn">💬 847</button>
+          </div>
+        </div>
+
+        <!-- Podcast Player -->
+        <div class="podcast-container">
+          <div class="podcast-header">
+            <div class="podcast-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 1C8.14 1 5 4.14 5 8C5 11.86 8.14 15 12 15C15.86 15 19 11.86 19 8C19 4.14 15.86 1 12 1Z"/>
+                <path d="M8.5 21H15.5M12 15V21M12 5V11M9.5 8H14.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="podcast-label">Your personalized podcast</span>
+            </div>
+            <span class="podcast-duration" id="headerDuration">0:00</span>
+          </div>
+
+          <div class="podcast-player">
+            <button class="play-button" id="playBtn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" id="playIcon">
+                <path d="M8 5.14v13.72a1 1 0 001.5.86l11-6.86a1 1 0 000-1.72l-11-6.86a1 1 0 00-1.5.86z"/>
+              </svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" id="pauseIcon" style="display: none;">
+                <rect x="6" y="4" width="4" height="16" rx="1"/>
+                <rect x="14" y="4" width="4" height="16" rx="1"/>
+              </svg>
+            </button>
+
+            <div class="waveform-container">
+              <div class="waveform" id="waveform"></div>
+              <div class="time-display">
+                <span class="current-time" id="currentTime">0:00</span>
+                <span class="total-time" id="totalTime">0:00</span>
+              </div>
+            </div>
+
+            <button class="speed-btn">1×</button>
+          </div>
+
+          <div class="podcast-info">
+            <strong>The Daily Deep Dive</strong> — A conversation between Sarah Chen and Michael Torres 
+            exploring the themes of this article.
+          </div>
+
+          <button class="customize-btn" id="customizeBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            Customize your podcast
+          </button>
+        </div>
+
+        <audio id="audio" src="posdcast-v1.m4a" preload="metadata"></audio>
+
+        <!-- Lead Image -->
+        <figure class="lead-image">
+          <img class="lead-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&h=800&fit=crop" alt="College students sitting together on campus lawn">
+          <figcaption class="caption">
+            Students at the University of Michigan participate in a weekly "phone-free hour" 
+            on the campus lawn. 
+            <span class="credit">Brittany Greeson for The New York Times</span>
+          </figcaption>
+        </figure>
+
+        <!-- Article Body -->
+        <div class="article-body">
+          <span class="drop-cap">W</span>
+          <p>
+            hen Maya Chen arrived at Stanford University last fall, she made a decision 
+            that baffled her roommates: She left her iPhone at home. In its place, she 
+            brought a $30 Nokia flip phone that could do little more than make calls and 
+            send texts — and even that required pressing the same button three times to 
+            type a single letter.
+          </p>
+
+          <p>
+            "People thought I was doing some kind of performance art," said Ms. Chen, 20, 
+            a junior studying computer science. "But after a semester of doomscrolling 
+            and losing hours to TikTok, I needed something drastic."
+          </p>
+
+          <p>
+            She is part of a growing movement of college students who are experimenting 
+            with what they call "tech fasts" — deliberate periods of disconnection from 
+            smartphones and social media that range from a few hours to entire semesters.
+          </p>
+
+          <blockquote class="pull-quote">
+            <p class="pull-quote-text">
+              "My brain felt like it was constantly buffering. I couldn't focus on 
+              anything for more than five minutes."
+            </p>
+          </blockquote>
+
+          <p>
+            At universities across the country, students are forming clubs dedicated to 
+            phone-free activities, organizing "dumbphone" swaps where they trade 
+            smartphones for basic devices, and even creating designated "no-scroll zones" 
+            in libraries and dining halls.
+          </p>
+
+          <h2 class="subhead">A Return to Simpler Times</h2>
+
+          <p>
+            The flip phone revival began as a trickle but has become something closer 
+            to a stream. Sales of "dumbphones" — basic phones without app stores or 
+            internet browsers — increased 35 percent in 2025, according to market 
+            research firm Counterpoint.
+          </p>
+
+          <figure class="inline-image">
+            <img class="inline-img" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop" alt="A basic flip phone">
+            <figcaption class="caption">
+              Basic "dumbphones" have seen a resurgence among young people seeking 
+              digital detox.
+              <span class="credit">Tony Cenicola/The New York Times</span>
+            </figcaption>
+          </figure>
+
+          <p>
+            For many students, the appeal goes beyond productivity. They describe 
+            experiencing something that feels almost novel: boredom.
+          </p>
+
+          <p>
+            "The first few days without my phone, I didn't know what to do with myself," 
+            said Jake Morrison, 21, a senior at the University of Texas at Austin. 
+            "I was standing in line for coffee and I just... stood there. No scrolling. 
+            It felt bizarre."
+          </p>
+
+          <h2 class="subhead">The Science of Disconnection</h2>
+
+          <p>
+            Research supports what these students are feeling. Studies have linked 
+            excessive smartphone use to increased rates of anxiety, depression and 
+            attention problems, particularly among young people.
+          </p>
+
+          <aside class="related-box">
+            <div class="related-header">Related Coverage</div>
+            <ul class="related-list">
+              <li class="related-item">
+                <a href="#" class="related-link">Gen Z Is Redefining What It Means to Be 'Connected'</a>
+              </li>
+              <li class="related-item">
+                <a href="#" class="related-link">The Rise of 'Quiet Quitting' Your Phone</a>
+              </li>
+              <li class="related-item">
+                <a href="#" class="related-link">Why Some Parents Are Delaying Smartphones Until High School</a>
+              </li>
+            </ul>
+          </aside>
+
+          <h2 class="subhead">'I Feel Like Myself Again'</h2>
+
+          <p>
+            But for students like Ms. Chen, the benefits of disconnection have been 
+            profound. Her grades improved. She started reading books again — actual 
+            physical books. She joined an intramural soccer team.
+          </p>
+
+          <p>
+            "I know it sounds dramatic, but I feel like myself again," she said. "I 
+            didn't realize how much of my identity had become wrapped up in this 
+            little rectangle."
+          </p>
+
+          <p>
+            She acknowledges the irony of studying computer science while eschewing 
+            a smartphone. But she sees no contradiction.
+          </p>
+
+          <p>
+            "I'm learning to build technology," she said. "That means I should 
+            understand how it affects us — the good and the bad."
+          </p>
+
+          <p>
+            "I'm not anti-phone," she said. "I'm just pro-presence."
+          </p>
+        </div>
+
+        <!-- Article Footer -->
+        <footer class="article-footer">
+          <div class="author-bio">
+            <a href="#" class="author-bio-link">Emma Goldberg</a>
+            writes about workplace culture, generational change and technology 
+            for the Style section.
+          </div>
+
+          <div class="tag-section">
+            A version of this article appears in print on Jan. 4, 2026, Section ST, Page 1 
+            of the New York edition with the headline: Unplugged and Loving It.
+          </div>
+
+          <div class="action-buttons">
+            <button class="action-btn">📖 Read more</button>
+            <button class="action-btn">💬 847 Comments</button>
+          </div>
+        </footer>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3 class="sidebar-heading">Most Popular</h3>
+          <ol class="popular-list">
+            <li class="popular-item">
+              <a href="#" class="popular-link">Trump's Tariff Threats Send Markets Into Turmoil</a>
+            </li>
+            <li class="popular-item">
+              <a href="#" class="popular-link">The Best New Restaurants in America for 2026</a>
+            </li>
+            <li class="popular-item">
+              <a href="#" class="popular-link">Opinion: Why This Economic Boom Feels Different</a>
+            </li>
+            <li class="popular-item">
+              <a href="#" class="popular-link">The Tiny Kitchen Tools That Changed How I Cook</a>
+            </li>
+            <li class="popular-item">
+              <a href="#" class="popular-link">He Paid Off His Student Loans. Here's How.</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="sidebar-section">
+          <h3 class="sidebar-heading">Editors' Picks</h3>
+          <div>
+            <a href="#" class="editors-pick">
+              <img class="editors-pick-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=100&fit=crop" alt="">
+              <span class="editors-pick-text">The Hidden Hiking Trail That Rivals the Grand Canyon</span>
+            </a>
+            <a href="#" class="editors-pick">
+              <img class="editors-pick-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=150&h=100&fit=crop" alt="">
+              <span class="editors-pick-text">Why Everyone Is Obsessed With This $15 Wine</span>
+            </a>
+            <a href="#" class="editors-pick">
+              <img class="editors-pick-img" src="https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?w=150&h=100&fit=crop" alt="">
+              <span class="editors-pick-text">The Simple Morning Routine That Changed My Life</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg viewBox="0 0 184 25" style="width: 150px; height: 20px;">
+            <path fill="currentColor" d="M13.8 2.9c0-2-1.9-2.5-3.4-2.5v.3c.9 0 1.6.3 1.6 1 0 .4-.3 1-1.2 1-.7 0-2.2-.4-3.3-.8C6.2 1.4 5 1 4 1 2 1 .6 2.5.6 4.2c0 1.5 1.1 2 1.5 2.2l.1-.2c-.2-.2-.5-.4-.5-1 0-.4.4-1.1 1.4-1.1.9 0 2.1.4 3.7.9 1.4.4 2.9.7 3.7.8v3.1L9 10.2v.1l1.5 1.3v4.3c-.8.5-1.7.6-2.5.6-1.5 0-2.8-.4-3.9-1.6l4.1-2V6l-5 2.2C3.6 6.9 4.7 6 5.8 5.4l-.1-.3c-3 .8-5.7 3.6-5.7 7 0 4.1 3.1 7.4 7.5 7.4 4.1 0 6.6-3.1 6.6-6.1h-.2c-.8 1.5-2.2 2.6-3.9 2.9v-4.4l1.5-1.3v-.1L10 9.3V6c.8 0 1.9-.2 2.7-.6.3.5.5 1.2.5 2v.2l.1-.1c1.1-1 1.9-1.6 2.9-1.6.8 0 1.5.5 1.5 1.3 0 .9-.7 1.4-1.4 1.9-.5.3-1.1.7-1.1 1.4 0 .9.8 1.8 2 1.8 1.3 0 2.4-1.1 2.4-2.6 0-1.4-1.1-3.4-3.8-3.4-.9 0-1.7.2-2.5.6V4.7c0-1.3.5-1.8 1.3-1.8.7 0 1.2.3 1.2.9 0 .3-.1.5-.1.6h.3c.4-.5.8-1.2.8-1.9zM7.5 12.9l-1.6.8c-.6-.8-1-2-1-3.4 0-.7.1-1.3.2-1.9l2.4-1v5.5z"/>
+          </svg>
+        </div>
+        <a href="#" class="footer-home-link">Go to Home Page »</a>
+        
+        <div class="footer-columns">
+          <div class="footer-column">
+            <div class="footer-column-title">NEWS</div>
+            <ul class="footer-column-links">
+              <li><a href="#">Home Page</a></li>
+              <li><a href="#">World</a></li>
+              <li><a href="#">U.S.</a></li>
+              <li><a href="#">Politics</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Tech</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <div class="footer-column-title">OPINION</div>
+            <ul class="footer-column-links">
+              <li><a href="#">Today's Opinion</a></li>
+              <li><a href="#">Columnists</a></li>
+              <li><a href="#">Editorials</a></li>
+              <li><a href="#">Guest Essays</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <div class="footer-column-title">ARTS</div>
+            <ul class="footer-column-links">
+              <li><a href="#">Today's Arts</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">Music</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <div class="footer-column-title">LIVING</div>
+            <ul class="footer-column-links">
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Style</a></li>
+              <li><a href="#">Travel</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 The New York Times Company</span>
+          <div class="footer-links">
+            <a href="#">NYTCo</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Customize Modal -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal" id="customizeModal">
+    <button class="modal-close" id="modalClose">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    
+    <h2 class="modal-title">Customize your podcast</h2>
+
+    <!-- Topics -->
+    <div class="modal-section">
+      <h3 class="section-title">Select topics</h3>
+      <div class="topics-grid" id="topicsGrid">
+        <button class="topic-chip" data-topic="Politics">Politics</button>
+        <button class="topic-chip" data-topic="World news">World news</button>
+        <button class="topic-chip" data-topic="Climate & environment">Climate</button>
+        <button class="topic-chip" data-topic="Technology">Technology</button>
+        <button class="topic-chip selected" data-topic="Style">Style</button>
+        <button class="topic-chip" data-topic="Health">Health</button>
+        <button class="topic-chip" data-topic="Business">Business</button>
+        <button class="topic-chip" data-topic="Sports">Sports</button>
+        <button class="topic-chip" data-topic="Arts">Arts</button>
+        <button class="topic-chip" data-topic="Travel">Travel</button>
+      </div>
+    </div>
+
+    <!-- Voice -->
+    <div class="modal-section">
+      <h3 class="section-title">Select a voice</h3>
+      <div class="voice-options">
+        <button class="voice-option selected" data-voice="sarah-michael">
+          <div class="voice-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3"/>
+            </svg>
+            <span class="voice-name">Sarah & Michael</span>
+          </div>
+          <div class="radio-outer selected">
+            <div class="radio-inner"></div>
+          </div>
+        </button>
+        <button class="voice-option" data-voice="emma-james">
+          <div class="voice-left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 10v3M6 6v11M10 3v18M14 8v7M18 5v13M22 10v3"/>
+            </svg>
+            <span class="voice-name">Emma & James</span>
+          </div>
+          <div class="radio-outer"></div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Length -->
+    <div class="modal-section">
+      <h3 class="section-title">Select podcast length</h3>
+      <div class="slider-container">
+        <input type="range" min="4" max="20" value="6" id="lengthSlider">
+        <div class="slider-labels">
+          <span>4 min</span>
+          <span class="current" id="currentLength">6 min</span>
+          <span>20 min</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="modal-buttons">
+      <button class="generate-btn" id="generateBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2Z"/>
+        </svg>
+        Generate podcast
+      </button>
+      <button class="cancel-btn" id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    // Audio Player
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('playBtn');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+    const currentTimeEl = document.getElementById('currentTime');
+    const totalTimeEl = document.getElementById('totalTime');
+    const headerDuration = document.getElementById('headerDuration');
+    const waveform = document.getElementById('waveform');
+
+    let isPlaying = false;
+
+    // Generate waveform
+    const numBars = 60;
+    const waveformBars = [];
+    
+    for (let i = 0; i < numBars; i++) {
+      const base = Math.sin(i * 0.3) * 0.3 + 0.5;
+      const variation = Math.sin(i * 0.7) * 0.2 + Math.cos(i * 0.5) * 0.15;
+      const height = Math.max(0.15, Math.min(1, base + variation));
+      
+      const bar = document.createElement('div');
+      bar.className = 'waveform-bar';
+      bar.style.height = (height * 100) + '%';
+      bar.style.backgroundColor = '#d0d0d0';
+      bar.dataset.index = i;
+      
+      bar.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const index = parseInt(this.dataset.index);
+        const seekTime = (index / numBars) * audio.duration;
+        audio.currentTime = seekTime;
+      });
+      
+      waveform.appendChild(bar);
+      waveformBars.push(bar);
+    }
+
+    function formatTime(seconds) {
+      if (!seconds || isNaN(seconds)) return '0:00';
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return mins + ':' + (secs < 10 ? '0' : '') + secs;
+    }
+
+    function updatePlayIcons(playing) {
+      playIcon.style.display = playing ? 'none' : 'block';
+      pauseIcon.style.display = playing ? 'block' : 'none';
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        isPlaying = true;
+      } else {
+        audio.pause();
+        isPlaying = false;
+      }
+      updatePlayIcons(isPlaying);
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+
+    function updateProgress() {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      
+      waveformBars.forEach((bar, i) => {
+        const barProgress = (i / numBars) * 100;
+        bar.style.backgroundColor = barProgress <= progress ? '#121212' : '#d0d0d0';
+      });
+      
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+    }
+
+    audio.addEventListener('loadedmetadata', () => {
+      totalTimeEl.textContent = formatTime(audio.duration);
+      headerDuration.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', updateProgress);
+
+    audio.addEventListener('ended', () => {
+      isPlaying = false;
+      updatePlayIcons(false);
+      audio.currentTime = 0;
+      updateProgress();
+    });
+
+    // Customize Modal
+    const customizeBtn = document.getElementById('customizeBtn');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const customizeModal = document.getElementById('customizeModal');
+    const modalClose = document.getElementById('modalClose');
+    const generateBtn = document.getElementById('generateBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+    const topicsGrid = document.getElementById('topicsGrid');
+    const voiceOptions = document.querySelectorAll('.voice-option');
+    const lengthSlider = document.getElementById('lengthSlider');
+    const currentLength = document.getElementById('currentLength');
+
+    function openModal() {
+      modalBackdrop.classList.add('show');
+      customizeModal.classList.add('show');
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.remove('show');
+      customizeModal.classList.remove('show');
+    }
+
+    customizeBtn.addEventListener('click', openModal);
+    modalBackdrop.addEventListener('click', closeModal);
+    modalClose.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    generateBtn.addEventListener('click', closeModal);
+
+    // Topics selection
+    topicsGrid.querySelectorAll('.topic-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('selected');
+      });
+    });
+
+    // Voice selection
+    voiceOptions.forEach(option => {
+      option.addEventListener('click', () => {
+        voiceOptions.forEach(o => {
+          o.classList.remove('selected');
+          o.querySelector('.radio-outer').classList.remove('selected');
+          o.querySelector('.radio-outer').innerHTML = '';
+        });
+        option.classList.add('selected');
+        option.querySelector('.radio-outer').classList.add('selected');
+        option.querySelector('.radio-outer').innerHTML = '<div class="radio-inner"></div>';
+      });
+    });
+
+    // Length slider
+    lengthSlider.addEventListener('input', () => {
+      currentLength.textContent = lengthSlider.value + ' min';
+    });
+  </script>
+</body>
+</html>
